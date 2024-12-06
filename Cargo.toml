@@ -1,5 +1,5 @@
 [package]
-name = "advent_of_code"
+name = "advent-of-code"
 version = "0.10.0"
 authors = [
     "Nick Davies <github@nicolasdavies.com.au>",
