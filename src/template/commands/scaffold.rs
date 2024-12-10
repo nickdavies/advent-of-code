@@ -24,17 +24,21 @@ mod tests_day_DAY_NUMBER {
 
     #[test]
     fn test_part_one() -> anyhow::Result<()> {
+        let expected = None;
         let input = &advent_of_code::template::read_file_part("examples", DAY, 1);
+        assert!(expected.is_none() || !input.is_empty(), "example 1 empty!");
         let result = part_one(input, RunType::Example)?;
-        assert_eq!(result, None);
+        assert_eq!(result, expected);
         Ok(())
     }
 
     #[test]
     fn test_part_two() -> anyhow::Result<()> {
+        let expected = None;
         let input = &advent_of_code::template::read_file_part("examples", DAY, 2);
+        assert!(expected.is_none() || !input.is_empty(), "example 2 empty!");
         let result = part_two(input, RunType::Example)?;
-        assert_eq!(result, None);
+        assert_eq!(result, expected);
         Ok(())
     }
 }
