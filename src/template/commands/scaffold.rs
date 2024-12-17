@@ -104,12 +104,16 @@ pub fn handle(day: Day) {
             process::exit(1);
         }
     }
-    match create_file(&example_path_2) {
+
+    match std::os::unix::fs::symlink(format!("{day}-1.txt"), &example_path_2) {
         Ok(_) => {
-            println!("Created empty part 2 example file \"{}\"", &example_path_2);
+            println!(
+                "Symlinked part 2 example file to parts 1 file \"{}\"",
+                &example_path_2
+            );
         }
         Err(e) => {
-            eprintln!("Failed to create example file: {e}");
+            eprintln!("Failed to create example 2 symlink: {e}");
             process::exit(1);
         }
     }
