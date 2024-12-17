@@ -6,7 +6,8 @@ use std::{
 
 use crate::Day;
 
-const MODULE_TEMPLATE: &str = r#"advent_of_code::solution!(DAY_NUMBER);
+const MODULE_TEMPLATE: &str = r#"#![allow(unused_imports)]
+advent_of_code::solution!(DAY_NUMBER);
 
 use advent_of_code::template::RunType;
 
